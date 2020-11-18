@@ -86,12 +86,15 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\FILES\Documents\Programming\Libraries\C++\SFML-2.5.1\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\FILES\Documents\Programming\Libraries\C++\SFML-2.5.1\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;winmm.lib;gdi32.lib;freetype.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -100,14 +103,17 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\FILES\Documents\Programming\Libraries\C++\SFML-2.5.1\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\FILES\Documents\Programming\Libraries\C++\SFML-2.5.1\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-s.lib;sfml-system-s.lib;sfml-window-s.lib;winmm.lib;gdi32.lib;freetype.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -139,29 +145,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\Desktop\GUI\GUIButton.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\..\Desktop\GUI\GUICheckbox.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\..\Desktop\GUI\GUIElement.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\..\Desktop\GUI\GUIInterface.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\..\Desktop\GUI\GUILabel.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\..\Desktop\GUI\GUIScrollbar.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\..\Desktop\GUI\GUITextfield.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\..\Desktop\GUI\Manager_GUI.cpp" />
+    <ClCompile Include="GUIButton.cpp" />
+    <ClCompile Include="GUICheckbox.cpp" />
+    <ClCompile Include="GUIElement.cpp" />
+    <ClCompile Include="GUIInterface.cpp" />
+    <ClCompile Include="GUILabel.cpp" />
+    <ClCompile Include="GUIScrollbar.cpp" />
+    <ClCompile Include="GUITextfield.cpp" />
+    <ClCompile Include="Manager_GUI.cpp" />
     <ClCompile Include="SimpleGUI.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\..\Desktop\GUI\GUIButton.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\Desktop\GUI\GUICheckbox.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\Desktop\GUI\GUIData.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\Desktop\GUI\GUIElement.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\Desktop\GUI\GUIFormattingData.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\Desktop\GUI\GUIInterface.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\Desktop\GUI\GUILabel.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\Desktop\GUI\GUILayerData.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\Desktop\GUI\GUIScrollbar.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\Desktop\GUI\GUISticky.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\Desktop\GUI\GUITextfield.h" />
-    <ClInclude Include="..\..\..\..\..\..\..\Desktop\GUI\Manager_GUI.h" />
+    <ClInclude Include="CustomException.h" />
+    <ClInclude Include="EnumConverter.h" />
+    <ClInclude Include="GUIButton.h" />
+    <ClInclude Include="GUICheckbox.h" />
+    <ClInclude Include="GUIData.h" />
+    <ClInclude Include="GUIElement.h" />
+    <ClInclude Include="GUIFormattingData.h" />
+    <ClInclude Include="GUIInterface.h" />
+    <ClInclude Include="GUILabel.h" />
+    <ClInclude Include="GUILayerData.h" />
+    <ClInclude Include="GUIScrollbar.h" />
+    <ClInclude Include="GUISticky.h" />
+    <ClInclude Include="GUITextfield.h" />
+    <ClInclude Include="KeyProcessing.h" />
+    <ClInclude Include="MagicEnum.h" />
+    <ClInclude Include="Manager_GUI.h" />
+    <ClInclude Include="StreamAttributes.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
